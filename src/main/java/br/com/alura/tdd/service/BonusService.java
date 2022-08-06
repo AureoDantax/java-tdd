@@ -11,7 +11,7 @@ public class BonusService {
         BigDecimal valor = funcionario.getSalario().multiply(new BigDecimal("0.1"));
 
         if (valor.compareTo(new BigDecimal("1000")) > 0) {
-            throw new IllegalArgumentException("O salário atual não permite recebimento de bônuss");
+            throw new IllegalArgumentException("O salário atual não permite recebimento de bônus");
         }
         return valor.setScale(2, RoundingMode.HALF_UP);
     }
