@@ -23,14 +23,13 @@ class BonusServiceTest {
     void BonusZero() {
         BonusService service = new BonusService();
 
-
-               try{service.calcularBonus(
-                       new Funcionario("Aureo", LocalDate.now(), new BigDecimal("20000")));
-                       fail(" não deu exceção");
-               } catch (Exception e){
-                assertEquals("O salário atual não permite recebimento de bônus",e.getMessage());
+        try {
+            service.calcularBonus(
+                    new Funcionario("Aureo", LocalDate.now(), new BigDecimal("20000")));
+            fail(" não deu exceção");
+        } catch (Exception e) {
+            assertEquals("O salário atual não permite recebimento de bônus", e.getMessage());
         }
-
 
 
     }
